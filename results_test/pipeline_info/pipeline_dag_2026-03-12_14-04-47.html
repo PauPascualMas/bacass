@@ -36,77 +36,56 @@
 flowchart TB
     subgraph " "
     v2["Channel.fromList"]
-    v82[" "]
-    v83[" "]
-    v100["out_fmt"]
-    v101["genome_size"]
-    v102["target"]
-    v111["Channel.of"]
-    v114["Channel.fromPath"]
-    v117["Channel.fromPath"]
-    v121["ch_workflow_summary"]
+    v52["adapter_fasta"]
+    v53["discard_trimmed_pass"]
+    v54["save_trimmed_fail"]
+    v55["save_merged"]
+    v115[" "]
+    v116[" "]
     end
     subgraph " "
     v13["ch_longreads"]
     v15["ch_fast5"]
-    v73[" "]
-    v74[" "]
-    v85[" "]
-    v86[" "]
-    v87[" "]
-    v88[" "]
-    v91[" "]
-    v92[" "]
+    v34["ch_fastqc_raw_multiqc"]
+    v35["fastqc_raw_html"]
+    v57["trim_reads_merged"]
+    v58["trim_reads_fail"]
+    v59["trim_log"]
+    v60["trim_html"]
+    v66["ch_fastqc_trim_multiqc"]
+    v67["fastqc_trim_html"]
+    v103[" "]
     v104[" "]
-    v156[" "]
-    v157[" "]
-    v158[" "]
-    v159[" "]
-    v161["multiqc_report"]
-    v164[" "]
+    v118[" "]
+    v119[" "]
+    v120[" "]
+    v121[" "]
+    v122["ch_quast_multiqc"]
+    v124["ch_versions"]
+    v126[" "]
+    v127[" "]
+    v131[" "]
     end
     subgraph "NFCORE_BACASS [NFCORE_BACASS]"
     subgraph "NFCORE_BACASS:BACASS [BACASS]"
     v17(["CAT_FASTQ_SHORT"])
-    v72(["UNICYCLER"])
-    v84(["QUAST"])
-    v103(["GFASTATS"])
-    v155(["CUSTOM_MULTIQC"])
+    subgraph "NFCORE_BACASS:BACASS:FASTQ_TRIM_FASTP_FASTQC [FASTQ_TRIM_FASTP_FASTQC]"
+    v33(["FASTQC_RAW"])
+    v56(["FASTP"])
+    v65(["FASTQC_TRIM"])
+    v36(( ))
+    v63(( ))
+    end
+    v102(["UNICYCLER"])
+    v117(["QUAST"])
     v10(( ))
     v19(( ))
-    subgraph "NFCORE_BACASS:BACASS:FASTQ_TRIM_FASTP_FASTQC [FASTQ_TRIM_FASTP_FASTQC]"
-    v44(( ))
-    end
-    v75(( ))
-    v118(( ))
-    v119(( ))
-    v120(( ))
-    v122(( ))
-    v123(( ))
-    v125(( ))
-    v127(( ))
-    v129(( ))
-    v131(( ))
-    v133(( ))
-    v135(( ))
-    v137(( ))
-    v139(( ))
-    v141(( ))
-    v143(( ))
-    v145(( ))
-    v147(( ))
-    v149(( ))
-    v151(( ))
-    v153(( ))
-    v160(( ))
-    v162(( ))
+    v100(( ))
+    v105(( ))
     end
     end
     subgraph "PIPELINE_INITIALISATION [PIPELINE_INITIALISATION]"
     v3(( ))
-    end
-    subgraph "PIPELINE_COMPLETION [PIPELINE_COMPLETION]"
-    v163(( ))
     end
     v2 --> v3
     v10 --> v13
@@ -114,65 +93,46 @@ flowchart TB
     v10 --> v17
     v17 --> v10
     v17 --> v19
-    v10 --> v72
-    v72 --> v74
-    v72 --> v73
-    v72 --> v19
-    v72 --> v75
-    v82 --> v84
-    v83 --> v84
-    v75 --> v84
-    v84 --> v88
-    v84 --> v87
-    v84 --> v86
-    v84 --> v85
-    v84 --> v19
-    v84 --> v143
-    v75 --> v91
-    v75 --> v92
-    v100 --> v103
-    v101 --> v103
+    v10 --> v33
+    v33 --> v35
+    v33 --> v34
+    v33 --> v36
+    v52 --> v56
+    v53 --> v56
+    v54 --> v56
+    v55 --> v56
+    v10 --> v56
+    v56 --> v60
+    v56 --> v59
+    v56 --> v58
+    v56 --> v57
+    v56 --> v36
+    v56 --> v63
+    v63 --> v65
+    v65 --> v67
+    v65 --> v66
+    v65 --> v36
+    v100 --> v102
+    v102 --> v104
     v102 --> v103
-    v75 --> v103
-    v103 --> v104
-    v103 --> v19
-    v103 --> v153
-    v111 --> v19
-    v114 --> v118
-    v117 --> v123
-    v121 --> v122
-    v19 --> v155
-    v118 --> v155
-    v119 --> v155
-    v120 --> v155
-    v122 --> v155
-    v123 --> v155
-    v125 --> v155
-    v127 --> v155
-    v129 --> v155
-    v131 --> v155
-    v133 --> v155
-    v135 --> v155
-    v137 --> v155
-    v139 --> v155
-    v141 --> v155
-    v143 --> v155
-    v145 --> v155
-    v147 --> v155
-    v149 --> v155
-    v151 --> v155
-    v153 --> v155
-    v155 --> v159
-    v155 --> v158
-    v155 --> v157
-    v155 --> v156
-    v155 --> v160
-    v155 --> v162
-    v160 --> v161
-    v163 --> v164
+    v102 --> v19
+    v102 --> v105
+    v115 --> v117
+    v116 --> v117
+    v105 --> v117
+    v117 --> v122
+    v117 --> v121
+    v117 --> v120
+    v117 --> v119
+    v117 --> v118
+    v117 --> v19
+    v19 --> v124
+    v105 --> v126
+    v105 --> v127
+    v105 --> v131
     v3 --> v10
-    v44 --> v19
-    v162 --> v163
+    v36 --> v19
+    v63 --> v100
 
 </pre>
 <script type="module">

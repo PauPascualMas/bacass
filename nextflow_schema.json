@@ -243,10 +243,6 @@
                 "gfastats_instruct": {
                     "type": ["string", "null"],
                     "description": "Optional instruction file for gfastats"
-                },
-                "skip_gfastats": {
-                    "type": "boolean",
-                    "description": "Skip gfastats assembly statistics"
                 }
             }
         },
@@ -329,6 +325,11 @@
                 "skip_busco": {
                     "type": "boolean",
                     "description": "Skip BUSCO",
+                    "fa_icon": "fas fa-forward"
+                },
+                "skip_gfastats": {
+                    "type": "boolean",
+                    "description": "Skip gfastats",
                     "fa_icon": "fas fa-forward"
                 },
                 "skip_polish": {

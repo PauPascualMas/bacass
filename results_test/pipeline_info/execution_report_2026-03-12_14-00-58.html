@@ -18,11 +18,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nextflow workflow report for run id [agitated_nobel]">
+  <meta name="description" content="Nextflow workflow report for run id [stoic_stonebraker]">
   <meta name="author" content="Paolo Di Tommaso, Phil Ewels">
   <link rel="icon" type="image/png" href="https://www.nextflow.io/img/favicon.png" />
 
-  <title>[agitated_nobel] Nextflow Workflow Report</title>
+  <title>[stoic_stonebraker] Nextflow Workflow Report</title>
 
   <style type="text/css">
   /*!
@@ -137,7 +137,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         <li class="nav-item"><a class="nav-link" href="#tasks">Tasks</a></li>
       </ul>
       <span class="navbar-text">
-        [agitated_nobel]
+        [stoic_stonebraker]
       </span>
     </div>
   </nav>
@@ -146,22 +146,24 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
     <div class="container">
 
       <h1 class="display-3">Nextflow workflow report</h1>
-      <h2 class="text-muted mb-4"><samp>[agitated_nobel]</samp> </h2>
+      <h2 class="text-muted mb-4"><samp>[stoic_stonebraker]</samp> <em>(resumed run)</em></h2>
 
       
           <div class="alert alert-danger mb-4">
               <h4>Workflow execution completed unsuccessfully!</h4>
               <p>The exit status of the task that caused the workflow execution to fail was: <code>null</code>.</p>
               <p>The full error message was:</p>
-              <pre>Cannot invoke "java.nio.file.Path.getFileSystem()" because "path" is null</pre>
+              <pre>The `-profile` option cannot end with a trailing comma, please remove it and re-run the pipeline!
+HINT: A common mistake is to provide multiple values separated by spaces e.g. `-profile test, docker`.
+</pre>
           </div>
       
 
       <dl>
         <dt>Run times</dt>
         <dd>
-          <span id="workflow_start">11-Mar-2026 17:12:07</span> - <span id="workflow_complete">11-Mar-2026 17:12:09</span>
-          (<span id="completed_fromnow"></span>duration: <strong>2.6s</strong>)
+          <span id="workflow_start">12-Mar-2026 14:01:02</span> - <span id="workflow_complete">12-Mar-2026 14:01:04</span>
+          (<span id="completed_fromnow"></span>duration: <strong>2.3s</strong>)
         </dd>
 
         <dl>
@@ -174,7 +176,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         </dl>
 
         <dt>Nextflow command</dt>
-        <dd><pre class="nfcommand"><code>nextflow run . -profile test,docker --skip_fastp true --skip_fastqc true --skip_nanoplot true --skip_toulligqc true --skip_pycoqc true --skip_kraken2 true --skip_kmerfinder true --skip_busco true --skip_annotation true --skip_gfastats false --assembler unicycler --outdir results_test</code></pre></dd>
+        <dd><pre class="nfcommand"><code>nextflow run . -profile test, singularity --skip_nanoplot --skip_toulligqc --skip_pycoqc --skip_kraken2 --skip_kmerfinder --skip_busco --skip_annotation --assembler unicycler --outdir results_test -resume --modules_branch add-gfastats</code></pre></dd>
       </dl>
 
       <dl class="row small">
@@ -201,12 +203,12 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         
 
         <dt class="col-sm-3">Workflow session</dt>
-        <dd class="col-sm-9"><code>d6298500-6797-4b0b-b986-5c33ba155049</code></dd>
+        <dd class="col-sm-9"><code>7909c38f-6e33-4bf8-97b4-f86a809b55a7</code></dd>
 
         
 
         <dt class="col-sm-3">Workflow profile</dt>
-        <dd class="col-sm-9">test,docker</dd>
+        <dd class="col-sm-9">test,</dd>
 
         
 

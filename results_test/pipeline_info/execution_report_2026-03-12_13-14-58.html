@@ -18,11 +18,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nextflow workflow report for run id [sick_colden]">
+  <meta name="description" content="Nextflow workflow report for run id [grave_sammet]">
   <meta name="author" content="Paolo Di Tommaso, Phil Ewels">
   <link rel="icon" type="image/png" href="https://www.nextflow.io/img/favicon.png" />
 
-  <title>[sick_colden] Nextflow Workflow Report</title>
+  <title>[grave_sammet] Nextflow Workflow Report</title>
 
   <style type="text/css">
   /*!
@@ -137,7 +137,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         <li class="nav-item"><a class="nav-link" href="#tasks">Tasks</a></li>
       </ul>
       <span class="navbar-text">
-        [sick_colden]
+        [grave_sammet]
       </span>
     </div>
   </nav>
@@ -146,22 +146,22 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
     <div class="container">
 
       <h1 class="display-3">Nextflow workflow report</h1>
-      <h2 class="text-muted mb-4"><samp>[sick_colden]</samp> </h2>
+      <h2 class="text-muted mb-4"><samp>[grave_sammet]</samp> <em>(resumed run)</em></h2>
 
       
           <div class="alert alert-danger mb-4">
               <h4>Workflow execution completed unsuccessfully!</h4>
               <p>The exit status of the task that caused the workflow execution to fail was: <code>null</code>.</p>
               <p>The full error message was:</p>
-              <pre>Cannot invoke "java.nio.file.Path.getFileSystem()" because "path" is null</pre>
+              <pre>A process input channel evaluates to null -- Invalid declaration `val out_fmt`</pre>
           </div>
       
 
       <dl>
         <dt>Run times</dt>
         <dd>
-          <span id="workflow_start">11-Mar-2026 17:05:38</span> - <span id="workflow_complete">11-Mar-2026 17:05:41</span>
-          (<span id="completed_fromnow"></span>duration: <strong>2.6s</strong>)
+          <span id="workflow_start">12-Mar-2026 13:14:59</span> - <span id="workflow_complete">12-Mar-2026 13:15:02</span>
+          (<span id="completed_fromnow"></span>duration: <strong>2.9s</strong>)
         </dd>
 
         <dl>
@@ -174,7 +174,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         </dl>
 
         <dt>Nextflow command</dt>
-        <dd><pre class="nfcommand"><code>nextflow run . -profile test,docker --skip_fastp true --skip_fastqc true --skip_nanoplot true --skip_toulligqc true --skip_pycoqc true --skip_kraken2 true --skip_kmerfinder true --skip_busco true --skip_annotation true --skip_gfastats false --assembler unicycler --outdir results_test</code></pre></dd>
+        <dd><pre class="nfcommand"><code>nextflow run . -profile test,docker --skip_nanoplot true --skip_toulligqc true --skip_pycoqc true --skip_kraken2 true --skip_kmerfinder true --skip_busco true --skip_annotation true --outdir results_test -resume</code></pre></dd>
       </dl>
 
       <dl class="row small">
@@ -201,7 +201,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         
 
         <dt class="col-sm-3">Workflow session</dt>
-        <dd class="col-sm-9"><code>8bb95d54-94a9-4622-ac32-ab6cdd8cbe7b</code></dd>
+        <dd class="col-sm-9"><code>7909c38f-6e33-4bf8-97b4-f86a809b55a7</code></dd>
 
         
 

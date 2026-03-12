@@ -42,13 +42,13 @@ flowchart TB
     v54["save_merged"]
     v106[" "]
     v107[" "]
-    v124["out_fmt"]
-    v125["genome_size"]
-    v126["target"]
-    v135["Channel.of"]
-    v138["Channel.fromPath"]
-    v141["Channel.fromPath"]
-    v145["ch_workflow_summary"]
+    v126["out_fmt"]
+    v127["genome_size"]
+    v128["target"]
+    v137["Channel.of"]
+    v140["Channel.fromPath"]
+    v143["Channel.fromPath"]
+    v147["ch_workflow_summary"]
     end
     subgraph " "
     v13["ch_longreads"]
@@ -67,13 +67,15 @@ flowchart TB
     v112[" "]
     v115[" "]
     v116[" "]
-    v128[" "]
-    v180[" "]
-    v181[" "]
+    v119[" "]
+    v130[" "]
     v182[" "]
     v183[" "]
-    v185["multiqc_report"]
-    v188[" "]
+    v184[" "]
+    v185[" "]
+    v187[" "]
+    v189["multiqc_report"]
+    v192[" "]
     end
     subgraph "NFCORE_BACASS [NFCORE_BACASS]"
     subgraph "NFCORE_BACASS:BACASS [BACASS]"
@@ -87,17 +89,16 @@ flowchart TB
     end
     v96(["UNICYCLER"])
     v108(["QUAST"])
-    v127(["GFASTATS"])
-    v179(["CUSTOM_MULTIQC"])
+    v129(["GFASTATS"])
+    v181(["CUSTOM_MULTIQC"])
     v10(( ))
     v19(( ))
     v94(( ))
     v99(( ))
-    v142(( ))
-    v143(( ))
     v144(( ))
+    v145(( ))
     v146(( ))
-    v147(( ))
+    v148(( ))
     v149(( ))
     v151(( ))
     v153(( ))
@@ -113,15 +114,17 @@ flowchart TB
     v173(( ))
     v175(( ))
     v177(( ))
-    v184(( ))
+    v179(( ))
     v186(( ))
+    v188(( ))
+    v190(( ))
     end
     end
     subgraph "PIPELINE_INITIALISATION [PIPELINE_INITIALISATION]"
     v3(( ))
     end
     subgraph "PIPELINE_COMPLETION [PIPELINE_COMPLETION]"
-    v187(( ))
+    v191(( ))
     end
     v2 --> v3
     v10 --> v13
@@ -132,7 +135,7 @@ flowchart TB
     v10 --> v33
     v33 --> v34
     v33 --> v35
-    v33 --> v149
+    v33 --> v151
     v51 --> v55
     v52 --> v55
     v53 --> v55
@@ -144,11 +147,11 @@ flowchart TB
     v55 --> v56
     v55 --> v35
     v55 --> v62
-    v55 --> v153
+    v55 --> v155
     v62 --> v64
     v64 --> v65
     v64 --> v35
-    v64 --> v151
+    v64 --> v153
     v94 --> v96
     v96 --> v98
     v96 --> v97
@@ -162,53 +165,56 @@ flowchart TB
     v108 --> v110
     v108 --> v109
     v108 --> v19
-    v108 --> v167
+    v108 --> v169
     v99 --> v115
     v99 --> v116
-    v124 --> v127
-    v125 --> v127
-    v126 --> v127
-    v99 --> v127
-    v127 --> v128
-    v127 --> v19
-    v127 --> v177
-    v135 --> v19
-    v138 --> v142
-    v141 --> v147
-    v145 --> v146
-    v19 --> v179
-    v142 --> v179
-    v143 --> v179
-    v144 --> v179
-    v146 --> v179
-    v147 --> v179
-    v149 --> v179
-    v151 --> v179
-    v153 --> v179
-    v155 --> v179
-    v157 --> v179
-    v159 --> v179
-    v161 --> v179
-    v163 --> v179
-    v165 --> v179
-    v167 --> v179
-    v169 --> v179
-    v171 --> v179
-    v173 --> v179
-    v175 --> v179
-    v177 --> v179
-    v179 --> v183
-    v179 --> v182
+    v99 --> v119
+    v126 --> v129
+    v127 --> v129
+    v128 --> v129
+    v99 --> v129
+    v129 --> v130
+    v129 --> v19
+    v129 --> v173
+    v129 --> v186
+    v137 --> v19
+    v140 --> v144
+    v143 --> v149
+    v147 --> v148
+    v19 --> v181
+    v144 --> v181
+    v145 --> v181
+    v146 --> v181
+    v148 --> v181
+    v149 --> v181
+    v151 --> v181
+    v153 --> v181
+    v155 --> v181
+    v157 --> v181
+    v159 --> v181
+    v161 --> v181
+    v163 --> v181
+    v165 --> v181
+    v167 --> v181
+    v169 --> v181
+    v171 --> v181
+    v173 --> v181
+    v175 --> v181
+    v177 --> v181
     v179 --> v181
-    v179 --> v180
-    v179 --> v184
-    v179 --> v186
-    v184 --> v185
-    v187 --> v188
+    v181 --> v185
+    v181 --> v184
+    v181 --> v183
+    v181 --> v182
+    v181 --> v188
+    v181 --> v190
+    v186 --> v187
+    v188 --> v189
+    v191 --> v192
     v3 --> v10
     v35 --> v19
     v62 --> v94
-    v186 --> v187
+    v190 --> v191
 
 </pre>
 <script type="module">

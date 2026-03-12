@@ -1,5 +1,5 @@
 
-Starting Unicycler (2026-03-11 16:39:34)
+Starting Unicycler (2026-03-12 11:04:14)
 ----------------------------------------
     Welcome to Unicycler, an assembly pipeline for bacterial genomes. Since you provided only short reads, Unicycler will essentially function as a SPAdes-optimiser. It will try many k-mer sizes, choose the best based on contig length and graph connectivity, and scaffold the graph using SPAdes repeat resolution.
     For more information, please see https://github.com/rrwick/Unicycler
@@ -10,7 +10,7 @@ Unicycler version: v0.5.1
 Using 4 threads
 
 The output directory already exists and files may be reused or overwritten:
-  /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca
+  /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107
 
 Dependencies:
   Program       Version   Status  
@@ -20,7 +20,7 @@ Dependencies:
   tblastn       2.16.0+   good    
 
 
-Choosing k-mer range for assembly (2026-03-11 16:39:37)
+Choosing k-mer range for assembly (2026-03-12 11:04:17)
 -------------------------------------------------------
     Unicycler chooses a k-mer range for SPAdes based on the length of the input reads. It uses a wide range of many k-mer sizes to maximise the chance of finding an ideal assembly.
 
@@ -29,25 +29,25 @@ Median read length: 75
 K-mer range: 15, 29, 39, 49, 55, 61, 67, 71
 
 
-SPAdes assemblies (2026-03-11 16:39:39)
+SPAdes assemblies (2026-03-12 11:04:19)
 ---------------------------------------
     Unicycler now uses SPAdes to assemble the short reads. It scores the assembly graph for each k-mer using the number of contigs (fewer is better) and the number of dead ends (fewer is better). The score function is 1/(c*(d+2)), where c is the contig count and d is the dead end count.
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15 --threads 4 --gfa11 --isolate -1 /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/ERR064912_1.fastp.fastq.gz -2 /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/ERR064912_2.fastp.fastq.gz -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15 --threads 4 --gfa11 --isolate -1 /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/ERR064912_1.fastp.fastq.gz -2 /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/ERR064912_2.fastp.fastq.gz -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29 --threads 4 --gfa11 --restart-from k15 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29 --threads 4 --gfa11 --restart-from k15 -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29,39 --threads 4 --gfa11 --restart-from k29 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29,39 --threads 4 --gfa11 --restart-from k29 -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29,39,49 --threads 4 --gfa11 --restart-from k39 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29,39,49 --threads 4 --gfa11 --restart-from k39 -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29,39,49,55 --threads 4 --gfa11 --restart-from k49 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29,39,49,55 --threads 4 --gfa11 --restart-from k49 -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29,39,49,55,61 --threads 4 --gfa11 --restart-from k55 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29,39,49,55,61 --threads 4 --gfa11 --restart-from k55 -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29,39,49,55,61,67 --threads 4 --gfa11 --restart-from k61 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29,39,49,55,61,67 --threads 4 --gfa11 --restart-from k61 -m 1024
 
-spades.py -o /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly -k 15,29,39,49,55,61,67,71 --threads 4 --gfa11 --restart-from k67 -m 1024
+spades.py -o /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly -k 15,29,39,49,55,61,67,71 --threads 4 --gfa11 --restart-from k67 -m 1024
 
 K-mer   Contigs   Dead ends   Score      
    15                         too complex
@@ -60,17 +60,17 @@ K-mer   Contigs   Dead ends   Score
    71       170          81      7.09e-05
 
 Read depth filter: removed 0 contigs totalling 0 bp
-Deleting /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/spades_assembly/
+Deleting /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/spades_assembly/
 
 
-Determining graph multiplicity (2026-03-11 16:44:42)
+Determining graph multiplicity (2026-03-12 11:09:43)
 ----------------------------------------------------
     Multiplicity is the number of times a sequence occurs in the underlying sequence. Single-copy contigs (those with a multiplicity of one, occurring only once in the underlying sequence) are particularly useful.
 
-Saving /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/002_depth_filter.gfa
+Saving /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/002_depth_filter.gfa
 
 
-Cleaning graph (2026-03-11 16:44:43)
+Cleaning graph (2026-03-12 11:09:43)
 ------------------------------------
     Unicycler now performs various cleaning procedures on the graph to remove overlaps and simplify the graph structure. The end result is a graph ready for bridging.
 
@@ -88,14 +88,14 @@ Removed zero-length segments:
 Merged small segments:
     617, 620, 621, 623, 624, 634, 637, 640, 645, 646, 647, 648, 651, 657, 660, 661, 664, 669, 672, 673, 677, 680, 684, 686, 687, 688, 691, 699, 700, 701, 702, 703, 705, 706, 707, 709, 712, 713, 716, 717, 718, 719, 720, 721, 722, 724, 725, 726, 727, 728, 729, 730
 
-Saving /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/003_overlaps_removed.gfa
+Saving /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/003_overlaps_removed.gfa
 
     Unicycler now selects a set of anchor contigs from the single-copy contigs. These are the contigs which will be connected via bridges to form the final assembly.
 
 121 anchor segments (2,847,499 bp) out of 619 total segments (2,915,359 bp)
 
 
-Creating SPAdes contig bridges (2026-03-11 16:44:43)
+Creating SPAdes contig bridges (2026-03-12 11:09:43)
 ----------------------------------------------------
     SPAdes uses paired-end information to perform repeat resolution (RR) and produce contigs from the assembly graph. SPAdes saves the graph paths corresponding to these contigs in the contigs.paths file. When one of these paths contains two or more anchor contigs, Unicycler can create a bridge from the path.
 
@@ -150,7 +150,7 @@ Start                                                               Path        
   128                                                               -346                                                               -129       63.2
 
 
-Creating loop unrolling bridges (2026-03-11 16:44:43)
+Creating loop unrolling bridges (2026-03-12 11:09:43)
 -----------------------------------------------------
     When a SPAdes contig path connects an anchor contig with the middle contig of a simple loop, Unicycler concludes that the sequences are contiguous (i.e. the loop is not a separate piece of DNA). It then uses the read depth of the middle and repeat contigs to guess the number of times to traverse the loop and makes a bridge.
 
@@ -162,7 +162,7 @@ Start   Repeat   Middle     End    by repeat    by middle   count   quality
    70     -343       90      30         0.96         0.93       1      42.2
 
 
-Applying bridges (2026-03-11 16:44:43)
+Applying bridges (2026-03-12 11:09:43)
 --------------------------------------
     Unicycler now applies to the graph in decreasing order of quality. This ensures that when multiple, contradictory bridges exist, the most supported option is used.
 
@@ -219,21 +219,21 @@ SPAdes         -42 -> 107    -316, -198, 313, 173, 244, -309, -262,      18.505
                              -189, 293, -497, -369                             
 SPAdes          89 -> 35     -305, -134, -305                            16.088
 
-Saving /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/004_bridges_applied.gfa
+Saving /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/004_bridges_applied.gfa
 
 
-Bridged assembly graph (2026-03-11 16:44:43)
+Bridged assembly graph (2026-03-12 11:09:43)
 --------------------------------------------
     The assembly is now mostly finished and no more structural changes will be made. Ideally the assembly graph should now have one contig per replicon and no erroneous contigs (i.e. a complete assembly). If there are more contigs, then the assembly is not complete.
 
-Saving /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/005_final_clean.gfa
+Saving /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/005_final_clean.gfa
 
 Component   Segments   Links   Length      N50      Longest segment   Status    
         1        469     655   2,919,549   64,609           231,119   incomplete
 
 
-Assembly complete (2026-03-11 16:44:43)
+Assembly complete (2026-03-12 11:09:43)
 ---------------------------------------
-Saving /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/assembly.gfa
-Saving /home/ppascual/git/bacass/work/be/c937e0bba712e45b399185b91962ca/assembly.fasta
+Saving /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/assembly.gfa
+Saving /home/ppascual/git/bacass/work/56/7ee967d0ea9520891f1eb3b5952107/assembly.fasta
 
