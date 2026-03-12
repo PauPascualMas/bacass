@@ -50,6 +50,11 @@
                         "git_sha": "81880787133db07d9b4c1febd152c090eb8325dc",
                         "installed_by": ["modules"]
                     },
+                    "gfastats": {
+                        "branch": "master",
+                        "git_sha": "f6ef6366b099730586ef3c7700214de0e3678f4f",
+                        "installed_by": ["modules"]
+                    },
                     "gunzip": {
                         "branch": "master",
                         "git_sha": "3a5fef109d113b4997c9822198664ca5f2716208",

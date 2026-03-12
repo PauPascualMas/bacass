@@ -1,0 +1,48 @@
+Detecting adapter sequence for read1...
+>Illumina Paired End Adapter 2
+GATCGGAAGAGCGGTTCAGCAGGAATGCCGAG
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 1500252
+total bases: 112518900
+Q20 bases: 110927091(98.5853%)
+Q30 bases: 108440082(96.375%)
+
+Read2 before filtering:
+total reads: 1500252
+total bases: 112518900
+Q20 bases: 109741942(97.532%)
+Q30 bases: 106741649(94.8655%)
+
+Read1 after filtering:
+total reads: 1475437
+total bases: 110641371
+Q20 bases: 109355127(98.8375%)
+Q30 bases: 107130036(96.8264%)
+
+Read2 after filtering:
+total reads: 1475437
+total bases: 110647324
+Q20 bases: 109070426(98.5748%)
+Q30 bases: 106372701(96.1367%)
+
+Filtering result:
+reads passed filter: 2950874
+reads failed due to low quality: 42126
+reads failed due to too many N: 252
+reads failed due to too short: 7252
+reads with adapter trimmed: 17597
+bases trimmed due to adapters: 1217713
+
+Duplication rate: 33.5927%
+
+Insert size peak (evaluated by paired-end reads): 118
+
+JSON report: ERR044595.fastp.json
+HTML report: ERR044595.fastp.html
+
+fastp --in1 ERR044595_1.fastq.gz --in2 ERR044595_2.fastq.gz --out1 ERR044595_1.fastp.fastq.gz --out2 ERR044595_2.fastp.fastq.gz --json ERR044595.fastp.json --html ERR044595.fastp.html --thread 4 --detect_adapter_for_pe 
+fastp v0.24.0, time used: 5 seconds

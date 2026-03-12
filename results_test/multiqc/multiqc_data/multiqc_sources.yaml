@@ -1,0 +1,20 @@
+'PREPROCESS: FastQC (raw reads)':
+  all_sections:
+    ERR044595_1: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc/ERR044595_1_fastqc.zip
+    ERR044595_2: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc/ERR044595_2_fastqc.zip
+    ERR064912_1: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc/ERR064912_1_fastqc.zip
+    ERR064912_2: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc/ERR064912_2_fastqc.zip
+'PREPROCESS: FastQC (trimmed reads)':
+  all_sections:
+    ERR044595_1: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc_trim/ERR044595_1_fastqc.zip
+    ERR044595_2: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc_trim/ERR044595_2_fastqc.zip
+    ERR064912_1: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc_trim/ERR064912_1_fastqc.zip
+    ERR064912_2: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastqc_trim/ERR064912_2_fastqc.zip
+'PREPROCESS: fastp (adapter trimming)':
+  all_sections:
+    ERR044595: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastp/ERR044595.fastp.json
+    ERR064912: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/fastp/ERR064912.fastp.json
+QUAST:
+  all_sections:
+    ERR044595: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/quast/report/report.tsv
+    ERR064912: /home/ppascual/git/bacass/work/b5/3b3e624a854c6831f0ac45729642ac/quast/report/report.tsv

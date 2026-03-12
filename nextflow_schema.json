@@ -165,6 +165,12 @@
                 }
             }
         },
+        "assembly_polishing": {
+            "type": "string",
+            "description": "Assembly polishing tool",
+            "default": "medaka"
+            }
+        },
         "busco_options": {
             "title": "BUSCO options",
             "type": "object",
@@ -198,20 +204,49 @@
                 }
             }
         },
-        "assembly_polishing": {
-            "title": "Assembly Polishing",
+        "gfastats_options": {
+            "title": "GFASTATS options",
             "type": "object",
-            "description": "",
+            "description": "Parameters for running gfastats assembly statistics",
             "default": "",
-            "fa_icon": "fas fa-user-astronaut",
+            "fa_icon": "fas fa-chart-bar",
             "properties": {
-                "polish_method": {
+                "gfastats_args": {
                     "type": "string",
-                    "default": "medaka",
-                    "fa_icon": "fas fa-hotdog",
-                    "description": "Which assembly polishing method to use.",
-                    "help_text": "Can be used to define which polishing method is used by default for long reads.",
-                    "enum": ["medaka", "nanopolish"]
+                    "description": "Extra arguments for gfastats"
+                },
+                "gfastats_out_fmt": {
+                    "type": "string",
+                    "default": "fasta",
+                    "description": "Output format for gfastats"
+                },
+                "gfastats_target": {
+                    "type": ["string", "null"],
+                    "description": "Target assembly graph"
+                },
+                "genome_size": {
+                    "type": ["string", "null"],
+                    "description": "Genome size, if relevant for gfastats"
+                },
+                "gfastats_agp": {
+                    "type": ["string", "null"],
+                    "description": "Optional AGP file for gfastats input"
+                },
+                "gfastats_include": {
+                    "type": ["string", "null"],
+                    "description": "Optional BED file with regions to include"
+                },
+                "gfastats_exclude": {
+                    "type": ["string", "null"],
+                    "description": "Optional BED file with regions to exclude"
+                },
+                "gfastats_instruct": {
+                    "type": ["string", "null"],
+                    "description": "Optional instruction file for gfastats"
+                },
+                "skip_gfastats": {
+                    "type": "boolean",
+                    "description": "Skip gfastats assembly statistics"
                 }
             }
         },
@@ -477,6 +512,9 @@
         },
         {
             "$ref": "#/$defs/assembly_polishing"
+        },
+        {
+            "$ref": "#/$defs/gfastats_options"
         },
         {
             "$ref": "#/$defs/annotation"

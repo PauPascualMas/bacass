@@ -24,6 +24,7 @@ process CUSTOM_MULTIQC {
     path ('kraken2_long/*')
     path ('quast/*')
     path ('busco/*')
+    path ('gfastats/*')
     path ('prokka/*')
     path ('bakta/*')
     path ('extra/*')

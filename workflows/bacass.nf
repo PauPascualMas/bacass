@@ -41,6 +41,7 @@ include { GUNZIP                                } from '../modules/nf-core/gunzi
 include { PROKKA                                } from '../modules/nf-core/prokka'
 include { FILTLONG                              } from '../modules/nf-core/filtlong'
 include { LIFTOFF                               } from '../modules/nf-core/liftoff'
+include { GFASTATS                              } from '../modules/nf-core/gfastats/main'      
 
 //
 // SUBWORKFLOWS: Consisting of a mix of local and nf-core/modules
@@ -557,6 +558,26 @@ workflow BACASS {
     }
 
     //
+    // MODULE: GFASTATS, calculate genome assembly statistics
+    //
+    ch_gfastats_multiqc = Channel.empty()
+    if (!params.skip_gfastats) {
+
+        GFASTATS(
+            ch_assembly,
+            params.gfastats_out_fmt,
+            params.genome_size,
+            params.gfastats_target,
+            params.gfastats_agp ? file(params.gfastats_agp) : [], ,
+            params.gfastats_include ? file(params.gfastats_include) : [], ,
+            params.gfastats_exclude ? file(params.gfastats_exclude) : [], ,
+            params.gfastats_instruct ? file(params.gfastats_instruct) : [], 
+        )
+        ch_gfastats_multiqc = GFASTATS.out.assembly_summary
+        ch_versions       = ch_versions.mix(GFASTATS.out.versions_gfastats)
+    }
+
+    //
     // MODULE: PROKKA, gene annotation
     //
     ch_prokka_txt_multiqc = Channel.empty()
@@ -678,6 +699,7 @@ workflow BACASS {
         ch_prokka_txt_multiqc.collect().ifEmpty([]),
         ch_bakta_txt_multiqc.collect().ifEmpty([]),
         ch_kmerfinder_multiqc.collectFile(name: 'multiqc_kmerfinder.yaml').ifEmpty([]),
+        ch_gfastats_multiqc.collect{it[1]}.ifEmpty([]),
     )
     multiqc_report = CUSTOM_MULTIQC.out.report.toList()
 

@@ -1,0 +1,3 @@
+Sample,# Input reads,# Trimmed reads (fastp),# Contigs,# Largest contig,# N50,# % Genome fraction,# Best hit (Kmerfinder),# Best hit assembly ID (Kmerfinder),# Best hit query coverage (Kmerfinder),# Best hit depth (Kmerfinder),# Second hit (Kmerfinder),# Second hit assembly ID (Kmerfinder),# Second hit query coverage (Kmerfinder),# Second hit depth (Kmerfinder)
+ERR044595,3000504,2950874,50,495459,106536.0,NA,NA,NA,NA,NA,NA,NA,NA,NA
+ERR064912,2000000,1988356,108,231119,64609.0,NA,NA,NA,NA,NA,NA,NA,NA,NA
