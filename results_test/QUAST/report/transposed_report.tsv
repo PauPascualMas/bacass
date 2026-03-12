@@ -1,3 +1,0 @@
-Assembly	# contigs (>= 0 bp)	# contigs (>= 1000 bp)	# contigs (>= 5000 bp)	# contigs (>= 10000 bp)	# contigs (>= 25000 bp)	# contigs (>= 50000 bp)	Total length (>= 0 bp)	Total length (>= 1000 bp)	Total length (>= 5000 bp)	Total length (>= 10000 bp)	Total length (>= 25000 bp)	Total length (>= 50000 bp)	# contigs	Largest contig	Total length	GC (%)	N50	N90	auN	L50	L90	# N's per 100 kbp
-ERR064912.scaffolds	182	90	66	56	38	21	2909170	2881211	2832802	2764300	2491323	1905468	108	231119	2893967	32.69	64609	16227	83273.8	13	45	0.00
-ERR044595.scaffolds	98	47	38	34	30	18	2766256	2756003	2737241	2707562	2638984	2176752	50	495459	2757989	32.66	106536	37472	165632.2	8	26	0.00

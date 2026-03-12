@@ -53,7 +53,8 @@
                     "gfastats": {
                         "branch": "master",
                         "git_sha": "f6ef6366b099730586ef3c7700214de0e3678f4f",
-                        "installed_by": ["modules"]
+                        "installed_by": ["modules"],
+                        "patch": "modules/nf-core/gfastats/gfastats.diff"
                     },
                     "gunzip": {
                         "branch": "master",

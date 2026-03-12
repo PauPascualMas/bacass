@@ -165,12 +165,6 @@
                 }
             }
         },
-        "assembly_polishing": {
-            "type": "string",
-            "description": "Assembly polishing tool",
-            "default": "medaka"
-            }
-        },
         "busco_options": {
             "title": "BUSCO options",
             "type": "object",
@@ -243,6 +237,23 @@
                 "gfastats_instruct": {
                     "type": ["string", "null"],
                     "description": "Optional instruction file for gfastats"
+                }
+            }
+        },
+        "assembly_polishing": {
+            "title": "Assembly Polishing",
+            "type": "object",
+            "description": "",
+            "default": "",
+            "fa_icon": "fas fa-user-astronaut",
+            "properties": {
+                "polish_method": {
+                    "type": "string",
+                    "default": "medaka",
+                    "fa_icon": "fas fa-hotdog",
+                    "description": "Which assembly polishing method to use.",
+                    "help_text": "Can be used to define which polishing method is used by default for long reads.",
+                    "enum": ["medaka", "nanopolish"]
                 }
             }
         },
@@ -512,10 +523,10 @@
             "$ref": "#/$defs/busco_options"
         },
         {
-            "$ref": "#/$defs/assembly_polishing"
+            "$ref": "#/$defs/gfastats_options"
         },
         {
-            "$ref": "#/$defs/gfastats_options"
+            "$ref": "#/$defs/assembly_polishing"
         },
         {
             "$ref": "#/$defs/annotation"
