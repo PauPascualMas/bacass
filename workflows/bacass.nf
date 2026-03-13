@@ -560,29 +560,26 @@ workflow BACASS {
     //
     // MODULE: GFASTATS, calculate genome assembly statistics
     //
-    ch_assembly.view() // just for debugging
 
     ch_gfastats_multiqc = Channel.empty()
 
-    ch_gfastats_agp      = params.gfastats_agp      ? Channel.fromPath(params.gfastats_agp).map { tuple([:], it) } : Channel.empty()
-    ch_gfastats_include  = params.gfastats_include  ? Channel.fromPath(params.gfastats_include).map { tuple([:], it) } : Channel.empty()
-    ch_gfastats_exclude  = params.gfastats_exclude  ? Channel.fromPath(params.gfastats_exclude).map { tuple([:], it) } : Channel.empty()
-    ch_gfastats_instruct = params.gfastats_instruct ? Channel.fromPath(params.gfastats_instruct).map { tuple([:], it) } : Channel.empty()
+    if (!params.skip_gfastats) {
 
+    GFASTATS(
+        ch_assembly,
+        params.gfastats_out_fmt,
+        params.genome_size,
+        params.gfastats_target,
+        params.gfastats_agp      ? Channel.fromPath(params.gfastats_agp).map { tuple([:], it) } : Channel.empty(),
+        params.gfastats_include  ? Channel.fromPath(params.gfastats_include).map { tuple([:], it) } : Channel.empty(),
+        params.gfastats_exclude  ? Channel.fromPath(params.gfastats_exclude).map { tuple([:], it) } : Channel.empty(),
+        params.gfastats_instruct ? Channel.fromPath(params.gfastats_instruct).map { tuple([:], it) } : Channel.empty()
+    )
 
-        GFASTATS(
-            ch_assembly,                                         // tuple val(meta), path(assembly)
-            params.gfastats_out_fmt,                             // val out_fmt
-            params.genome_size,                                  // val genome_size
-            params.gfastats_target,                              // val target
-            ch_gfastats_agp,
-            ch_gfastats_include,
-            ch_gfastats_exclude,
-            ch_gfastats_instruct
-        )
-    
-    ch_gfastats_multiqc = GFASTATS.out.assembly_summary
-    ch_versions         = ch_versions.mix(GFASTATS.out.versions_gfastats)
+        ch_gfastats_multiqc = GFASTATS.out.assembly_summary
+        ch_versions         = ch_versions.mix(GFASTATS.out.versions_gfastats)
+    }
+
     //
     // MODULE: PROKKA, gene annotation
     //
@@ -707,7 +704,7 @@ workflow BACASS {
         ch_bakta_txt_multiqc.collect().ifEmpty([]),
         ch_kmerfinder_multiqc.collectFile(name: 'multiqc_kmerfinder.yaml').ifEmpty([]),
     )
-    ch_gfastats_multiqc.view()
+
     multiqc_report = CUSTOM_MULTIQC.out.report.toList()
 
     emit:

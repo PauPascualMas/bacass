@@ -1,0 +1,74 @@
+ERR044595:
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-after_filtering_gc_content': 0.327916
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-after_filtering_q30_bases': 213502737.0
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-after_filtering_q30_rate': 0.964815
+  ? 'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-filtering_result_passed_filter_reads'
+  : 2950874.0
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-pct_adapter': 0.5864681400191435
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-pct_duplication': 33.5927
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-pct_surviving': 98.34594454798261
+  QUAST_mqc-generalstats-quast-N50: 106536.0
+  QUAST_mqc-generalstats-quast-Total_length: 2757989.0
+ERR044595_1:
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-avg_sequence_length': 75.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_duplicates': 33.0305690434366
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_gc': 33.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-total_sequences': 1500252.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-avg_sequence_length': 73.98933332971859
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-median_sequence_length': 74
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_duplicates': 32.322696977020485
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_gc': 32.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-total_sequences': 1475437.0
+ERR044595_2:
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-avg_sequence_length': 75.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_duplicates': 32.45999037870163
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_gc': 32.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-total_sequences': 1500252.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-avg_sequence_length': 74.99291667485633
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_duplicates': 32.33576904944886
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_gc': 32.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-total_sequences': 1475437.0
+ERR064912:
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-after_filtering_gc_content': 0.330588
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-after_filtering_q30_bases': 144578571.0
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-after_filtering_q30_rate': 0.969556
+  ? 'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-filtering_result_passed_filter_reads'
+  : 1988356.0
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-pct_adapter': 0.0168
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-pct_duplication': 0.2192
+  'PREPROCESS: fastp (adapter trimming)_mqc-generalstats-preprocess_fastp_adapter_trimming-pct_surviving': 99.4178
+  QUAST_mqc-generalstats-quast-N50: 64609.0
+  QUAST_mqc-generalstats-quast-Total_length: 2893967.0
+ERR064912_1:
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-avg_sequence_length': 75.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_duplicates': 5.08948443663806
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_gc': 33.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-total_sequences': 1000000.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-avg_sequence_length': 74.99582569720916
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_duplicates': 5.0854033442199835
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_gc': 33.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-total_sequences': 994178.0
+ERR064912_2:
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-avg_sequence_length': 75.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_duplicates': 6.731808250674263
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-percent_gc': 33.0
+  'PREPROCESS: FastQC (raw reads)_mqc-generalstats-preprocess_fastqc_raw_reads-total_sequences': 1000000.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-avg_sequence_length': 74.99582569720916
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-median_sequence_length': 75
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_duplicates': 6.741974828883272
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_fails': 9.090909090909092
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-percent_gc': 33.0
+  'PREPROCESS: FastQC (trimmed reads)_mqc-generalstats-preprocess_fastqc_trimmed_reads-total_sequences': 994178.0
